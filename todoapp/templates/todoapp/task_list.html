@@ -1,0 +1,8 @@
+<ul>
+    {% for task in tasks %}
+    <li>
+        {{task.title}}
+        <button hx-delete="{% url 'remove_task' task.id %}" hx-swap="outerHTML" hx-target="this">Delete</button>
+    </li>
+    {% endfor %}
+</ul>
